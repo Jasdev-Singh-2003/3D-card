@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  /* perspective: 900px; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.haha{
+  perspective: 900px;
+}
+
+.wrapper{
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  background-image: url(Images/dark_rider-cover.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  transform-style: preserve-3d;
+
+  transition: transform 500ms, box-shadow 500ms;
+}
+
+.bg-1{
+  background-image: url(Images/force_mage-cover.jpg);
+}
+
+.wrapper:hover{
+  transform: rotateX(30deg);
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.575);
+}
+
+.wrapper-title{
+  width: 60%;
+  position: absolute;
+  bottom: 5px;
+  left: 20%;
+  z-index: 1;
+
+  transition: transform 500ms;
+}
+
+.wrapper:hover .wrapper-title{
+  transform: translateZ(40px) rotateX(-35deg);
+}
+
+.big-hero{
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.wrapper:hover .big-hero{
+  opacity: 1;
+  transform: translateZ(100px) rotateX(-30deg);
+}
